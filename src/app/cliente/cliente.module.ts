@@ -1,9 +1,11 @@
+import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
-import { TabelaComponent } from "./tabela/tabela.component";
+import { ListaClienteComponent } from "./listaCliente/listaCliente.component";
 
 @NgModule({
-    declarations: [TabelaComponent],
-    exports:[TabelaComponent]
+    declarations: [ListaClienteComponent],
+    exports:[ListaClienteComponent],
+    imports:[CommonModule]
 })
 export class ClienteModule{
 
