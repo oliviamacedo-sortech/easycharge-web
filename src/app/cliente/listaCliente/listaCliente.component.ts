@@ -15,7 +15,6 @@ export class ListaClienteComponent implements OnInit{
         telefone: '',
         status: '',
         email: '',
-        profissao: '',
         renda: '',
         local: ''  
     }];
