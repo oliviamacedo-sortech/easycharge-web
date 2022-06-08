@@ -26,4 +26,10 @@ export class ListaClienteComponent implements OnInit{
         .listarClientes()
         .subscribe(paginaCliente => this.clientes = paginaCliente.content)
     }
+
+    deleteCliente(cliente: Cliente){
+        this.clienteService.deleteCLiente(cliente).subscribe(() => {this.clienteService.listarClientes();});
+        return this.clienteService.listarClientes()
+    }
+
 }

@@ -32,8 +32,7 @@
                                 th:href="@{/editar(id=${cliente.id})}">Editar Cliente</a>
                             </td>
                             <td>
-                                <a class="btn btn-danger" role="button"
-                                th:href="@{/delete(id=${cliente.id})}">Excluir</a>
+                                <button type="button" class="btn btn-danger btn-sm ml-1" (click)="deleteCliente(cliente)">Excluir</button>
                             </td>
                         </tr>
                     </table>
