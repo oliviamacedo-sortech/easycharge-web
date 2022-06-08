@@ -37,4 +37,8 @@ export class ListaClienteComponent implements OnInit{
         
     }
 
+    alterarStatus(cliente: Cliente){
+        this.clienteService.alterarStatus(cliente).subscribe(() => {this.getClientes()});
+    }
+
 }

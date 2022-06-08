@@ -5,7 +5,7 @@ import { PaginaCliente } from "./paginaCliente";
 import { retry, catchError } from 'rxjs/operators';
 import { throwError } from "rxjs";
 
-const API = 'http://localhost:8080'
+const API = 'http://localhost:8080/api/clientes'
 
 @Injectable({providedIn: 'root'})
 export class ClienteService {
@@ -20,13 +20,18 @@ export class ClienteService {
 
     listarClientes(){
         return this.http
-        .get<PaginaCliente>(API + '/api/clientes');
+        .get<PaginaCliente>(API);
     }
 
     deleteCLiente(cliente: Cliente){
-        return this.http.delete<Cliente>(API + '/api/clientes' + '/' + cliente.id,this.httpOptions)
+        return this.http.delete<Cliente>(API + '/' + cliente.id,this.httpOptions)
         .pipe(retry(1), catchError(this.handleError)
         )
+    }
+
+    alterarStatus(cliente: Cliente){
+      return this.http.get<Cliente>(API + '/alterarStatus')
+      .pipe(retry(1), catchError(this.handleError))
     }
 
     
@@ -39,7 +44,7 @@ export class ClienteService {
           // Erro ocorreu no lado do servidor
           errorMessage = `Código do erro: ${error.status}, ` + `menssagem: ${error.message}`;
         }
-        console.log(errorMessage);
+        alert(errorMessage);
         return throwError(errorMessage);
       };
 }
