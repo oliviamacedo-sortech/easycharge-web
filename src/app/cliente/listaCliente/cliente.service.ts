@@ -30,7 +30,7 @@ export class ClienteService {
     }
 
     alterarStatus(cliente: Cliente){
-      return this.http.get<Cliente>(API + '/alterarStatus')
+      return this.http.put<Cliente>(API + '/alterarStatus/' + cliente.id, this.httpOptions)
       .pipe(retry(1), catchError(this.handleError))
     }
 

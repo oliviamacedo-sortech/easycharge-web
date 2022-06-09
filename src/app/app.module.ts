@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 
 import { ClienteModule } from './cliente/cliente.module';
 import { HttpClientModule } from '@angular/common/http';
+import { ListaDividaComponent } from './divida/lista-divida/lista-divida.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListaDividaComponent,
+
   ],
   imports: [
     BrowserModule,
