@@ -14,7 +14,7 @@ export class ListaClienteComponent implements OnInit{
         id: '',
         cpf: '',
         telefone: '',
-        status: '',
+        statusDivida: '',
         email: '',
         renda: '',
         local: ''  

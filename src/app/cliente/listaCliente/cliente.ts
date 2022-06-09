@@ -2,7 +2,7 @@ export interface Cliente{
     id: any,
     cpf: string,
     telefone: string,
-    status: string,
+    statusDivida: string,
     email: string,
     renda: any,
     local: string   
