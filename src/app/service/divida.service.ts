@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { PaginaDivida } from "./paginaDivida";
+import { PaginaDivida } from "../model/paginaDivida";
 
 const API = 'http://localhost:8080/api/dividas'
 

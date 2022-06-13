@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Divida } from './divida';
-import { DividaService } from './divida.service';
+import { Divida } from 'src/app/model/divida';
+import { DividaService } from 'src/app/service/divida.service';
 
 
 
