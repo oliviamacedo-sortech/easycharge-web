@@ -7,15 +7,14 @@ import { AppComponent } from './app.component';
 import { ClienteModule } from './cliente/cliente.module';
 import { HttpClientModule } from '@angular/common/http';
 import { DividaModule } from './divida/divida.module';
-import { ListaCobrancaComponent } from './cobranca/lista-cobranca/lista-cobranca.component';
+
+
 
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ListaCobrancaComponent,
-
+    AppComponent
 
   ],
   imports: [
