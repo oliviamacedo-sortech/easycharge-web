@@ -24,14 +24,19 @@
                             <td>{{cliente.renda}}</td>
                             <td>{{cliente.local}}</td>
                             <td>
-                                <button type="button" class="btn btn-warning btn-sm ml-1" (click)="alterarStatus(cliente)">Alterar Status</button>
+                                <button type="button" class="btn btn-warning btn-sm ml-1" 
+                                (click)="alterarStatus(cliente)">
+                                <span *ngIf="cliente.status == 'SUSPENSO'">Ativar</span>
+                                <span *ngIf="cliente.status == 'ATIVO'">Suspender</span>
+                            </button>
                             </td>
                             <td>
-                                <a class="btn btn-info" role="button"
-                                th:href="@{/editar(id=${cliente.id})}">Editar Cliente</a>
+                                <a class="btn btn-info btn-sm ml-1" role="button"
+                                th:href="@{/editar(id=${cliente.id})}"><i class="fa fa-pencil"></i></a>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-danger btn-sm ml-1" (click)="deleteCliente(cliente)">Excluir</button>
+                                <button type="button" class="btn btn-danger btn-sm ml-1" 
+                                (click)="deleteCliente(cliente)"><i class="fa fa-trash "></i></button>
                             </td>
                         </tr>
                     </table>
