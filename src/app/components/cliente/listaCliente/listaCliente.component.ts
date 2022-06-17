@@ -12,12 +12,20 @@ export class ListaClienteComponent implements OnInit{
 
     clientes: Cliente[] = [{
         id: '',
+        nome: '',
         cpf: '',
         telefone: '',
-        statusDivida: '',
+        status: '',
         email: '',
         renda: '',
-        local: ''  
+        local: '',
+        profissao: '',
+        rua: '',
+        numero: '',
+        complemento: '',
+        bairro: '',
+        cidade: '',
+        estado: '' 
     }];
 
     constructor(private clienteService: ClienteService, private router: Router){}
@@ -39,6 +47,10 @@ export class ListaClienteComponent implements OnInit{
 
     alterarStatus(cliente: Cliente){
         this.clienteService.alterarStatus(cliente).subscribe(() => {this.getClientes()});
+    }
+
+    cadastroCliente(){
+        this.router.navigate(['cadastroCliente']);
     }
 
 }

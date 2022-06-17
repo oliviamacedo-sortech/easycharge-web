@@ -1,3 +1,128 @@
-<p>
-  cliente-form works!
-</p>
+
+    <nav class="navbar navbar-expand navbar-light bg-light d-flex justify-content-between mb-3">
+        <div class="navbar-nav">
+            <h3 class="m-lg-3">EasyCharge</h3>
+        </div>
+        <a href="/listaCliente"><button class="btn btn-outline-secondary my-2 my-sm-0 m-lg-2">Voltar</button></a>
+    </nav>
+    <div class="container">
+        <div class="jumbotron mb-0">
+            <h1 class="display-4">Novo Cliente</h1>
+        </div>
+        <div class="card mt-3 mb-4">
+            <form [formGroup]="cadastroClienteForm" class="card-body bg-light" (submit)="salvaCliente()">
+                <h4>Dados Pessoais</h4>
+                <div class="row g-3">
+                    <div class="form-group col-8">
+                        <label>Nome Cliente</label>
+                        <input formControlName="nome" class="form-control" id="nome" >
+                        <div class="text-danger mt-2" *ngIf="cadastroClienteForm.get('nome')?.errors?.required">
+                          Nome do cliente é obrigatório!
+                        </div>
+                    </div>
+
+                    <div class="form-group col-8">
+                      <label>CPF</label>
+                      <input formControlName="cpf" class="form-control" id="cpf" >
+                      <div class="text-danger mt-2" *ngIf="cadastroClienteForm.get('cpf')?.errors?.required">
+                        Nome do cliente é obrigatório!
+                      </div>
+                    </div>
+
+                    <div class="form-group col-8">
+                      <label>Telefone</label>
+                      <input formControlName="telefone" class="form-control" id="telefone" >
+                      <div class="text-danger mt-2" *ngIf="cadastroClienteForm.get('telefone')?.errors?.required">
+                        Nome do cliente é obrigatório!
+                      </div>
+                    </div>
+
+                    <div class="form-group col-8">
+                      <label>Email</label>
+                      <input formControlName="email" class="form-control" id="email">
+                      <div class="text-danger mt-2" *ngIf="cadastroClienteForm.get('email')?.errors?.required">
+                        Nome do cliente é obrigatório!
+                      </div>
+                    </div>
+                    
+                    <div class="form-group col-8">
+                      <label>Profissão</label>
+                      <input formControlName="profissao" class="form-control" id="profissao">
+                      <div class="text-danger mt-2" *ngIf="cadastroClienteForm.get('profissao')?.errors?.required">
+                        Nome do cliente é obrigatório!
+                      </div>
+                    </div>
+
+                    <div class="form-group col-8">
+                      <label>Renda</label>
+                      <input formControlName="renda" class="form-control" id="renda">
+                      <div class="text-danger mt-2" *ngIf="cadastroClienteForm.get('renda')?.errors?.required">
+                        Nome do cliente é obrigatório!
+                      </div>
+                    </div>
+
+                    <div class="form-group col-8">
+                      <label>Status do cliente</label>
+                        <!--<input th:field="*{statusCliente}" class="form-control" placeholder="ATIVO ou SUSPENSO" required>-->
+                        <select formControlName="status" class="form-control">
+                            <option value="SUSPENSO">SUSPENSO</option>
+                            <option value="ATIVO">ATIVO</option>
+                            <div class="text-danger mt-2" *ngIf="cadastroClienteForm.get('status')?.errors?.required">
+                              Nome do cliente é obrigatório!
+                            </div>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-8">
+                      <label>Rua</label>
+                      <input formControlName="rua" class="form-control" id="rua" >
+                      <div class="text-danger mt-2" *ngIf="cadastroClienteForm.get('rua')?.errors?.required">
+                        Nome do cliente é obrigatório!
+                      </div>
+                    </div>
+
+                    <div class="form-group col-8">
+                      <label>Número</label>
+                      <input formControlName="numero" class="form-control" id="numero">
+                      <div class="text-danger mt-2" *ngIf="cadastroClienteForm.get('numero')?.errors?.required">
+                        Nome do cliente é obrigatório!
+                      </div>
+
+                    </div>
+
+                    <div class="form-group col-8">
+                      <label>Complemento</label>
+                      <input formControlName="complemento" class="form-control" id="complemento">
+                    </div>
+
+                    <div class="form-group col-8">
+                      <label>Bairro</label>
+                      <input formControlName="bairro" class="form-control" id="bairro" >
+                      <div class="text-danger mt-2" *ngIf="cadastroClienteForm.get('bairro')?.errors?.required">
+                        Nome do cliente é obrigatório!
+                      </div>
+                    </div>
+
+                    <div class="form-group col-8">
+                      <label>Cidade</label>
+                      <input formControlName="cidade" class="form-control" id="cidade">
+                      <div class="text-danger mt-2" *ngIf="cadastroClienteForm.get('cidade')?.errors?.required">
+                        Nome do cliente é obrigatório!
+                      </div>
+                    </div>
+
+                    <div class="form-group col-8">
+                      <label>Estado</label>
+                      <input formControlName="estado" class="form-control" id="estado">
+                      <div class="text-danger mt-2" *ngIf="cadastroClienteForm.get('estado')?.errors?.required">
+                        Nome do cliente é obrigatório!
+                      </div>
+                    </div>
+
+                     
+                    
+                </div>
+                <button class="btn btn-primary mt-3" type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>

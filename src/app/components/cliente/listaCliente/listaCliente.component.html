@@ -1,10 +1,15 @@
-
-    <div class="container">
+<nav class="navbar navbar-expand navbar-light bg-light d-flex justify-content-between mb-3">
+    <div class="navbar-nav">
+        <h3 class="m-lg-3">EasyCharge</h3>
+    </div>
+    <button  class="btn btn-outline-secondary my-2 my-sm-0 m-lg-2" (click)="cadastroCliente()">Novo Cliente</button>
+</nav>
+     <div class="container">
         <div class="jumbotron mb-0">
             <h1 class="display-4">Lista de Clientes</h1>
         </div>
-        <div class="justify-content-center card mt-3 mb-2 $teal-200">
-            <form action="" class="card-body" method="post">
+        <div class="justify-content-center card mt-3 mb-2">
+            <div class="card-body" >
                     <table class="table" >
                         <tr>
                             <th scope="col">Nome do Cliente: </th> 
@@ -40,9 +45,9 @@
                             </td>
                         </tr>
                     </table>
-            </form>
+                </div>
         </div>
-    </div>
+    </div> 
 
 
 

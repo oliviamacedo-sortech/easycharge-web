@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ClienteModule } from './components/cliente/cliente.module';
 import { HttpClientModule } from '@angular/common/http';
 import { DividaModule } from './components/divida/divida.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 

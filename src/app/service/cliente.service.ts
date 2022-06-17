@@ -33,6 +33,11 @@ export class ClienteService {
       return this.http.put<Cliente>(API + '/alterarStatus/' + cliente.id, this.httpOptions)
       .pipe(retry(1), catchError(this.handleError))
     }
+    
+    salvaCliente(cliente: Cliente){
+      return this.http.post<Cliente>(API, cliente)
+      .pipe(retry(1), catchError(this.handleError))
+    }
 
     
     handleError(error: HttpErrorResponse) {
