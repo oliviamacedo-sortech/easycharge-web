@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="jumbotron mb-0">
+      <h1 class="display-4">Lista de Dívidas</h1>
+  </div>
+  <div class="justify-content-center card mt-3 mb-2 $teal-200">
+      <form action="" class="card-body" method="post">
+              <table class="table" >
+                  <tr>
+                      <th scope="col">Data de Abertura: </th> 
+                      <th scope="col">Data de Quitação: </th>
+                      <th scope="col">Descrição da Quitação: </th>
+                      <th scope="col">Status: </th>
+                      <th scope="col">Valor: </th>
+                      <th scope="col">Id do Cliente: </th>
+                  </tr>
+                  <tr *ngFor="let divida of dividas">
+                      <td>{{divida.dataAbertura}}</td>
+                      <td>{{divida.dataQuitacao}}</td>
+                      <td>{{divida.descricaoQuitacao}}</td>
+                      <td>{{divida.statusDivida}}</td>
+                      <td>{{divida.valor}}</td>
+                      <td>{{divida.idCliente}}</td>
+                      
+                  </tr>
+              </table>
+      </form>
+  </div>
+</div>

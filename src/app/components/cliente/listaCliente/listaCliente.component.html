@@ -1,0 +1,48 @@
+
+    <div class="container">
+        <div class="jumbotron mb-0">
+            <h1 class="display-4">Lista de Clientes</h1>
+        </div>
+        <div class="justify-content-center card mt-3 mb-2 $teal-200">
+            <form action="" class="card-body" method="post">
+                    <table class="table" >
+                        <tr>
+                            <th scope="col">Nome do Cliente: </th> 
+                            <th scope="col">CPF: </th>
+                            <th scope="col">Telefone: </th>
+                            <th scope="col">Status: </th>
+                            <th scope="col">Email: </th>
+                            <th scope="col">Renda: </th>
+                            <th scope="col">Local: </th>
+                        </tr>
+                        <tr *ngFor="let cliente of clientes">
+                            <td>{{cliente.nome}}</td>
+                            <td>{{cliente.cpf}}</td>
+                            <td>{{cliente.telefone}}</td>
+                            <td>{{cliente.status}}</td>
+                            <td>{{cliente.email}}</td>
+                            <td>{{cliente.renda}}</td>
+                            <td>{{cliente.local}}</td>
+                            <td>
+                                <button type="button" class="btn btn-warning btn-sm ml-1" 
+                                (click)="alterarStatus(cliente)">
+                                <span *ngIf="cliente.status == 'SUSPENSO'">Ativar</span>
+                                <span *ngIf="cliente.status == 'ATIVO'">Suspender</span>
+                            </button>
+                            </td>
+                            <td>
+                                <a class="btn btn-info btn-sm ml-1" role="button"
+                                th:href="@{/editar(id=${cliente.id})}"><i class="fa fa-pencil"></i></a>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-danger btn-sm ml-1" 
+                                (click)="deleteCliente(cliente)"><i class="fa fa-trash "></i></button>
+                            </td>
+                        </tr>
+                    </table>
+            </form>
+        </div>
+    </div>
+
+
+
