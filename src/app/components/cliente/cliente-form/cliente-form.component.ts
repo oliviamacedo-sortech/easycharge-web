@@ -47,4 +47,8 @@ export class ClienteFormComponent implements OnInit {
             .subscribe(() => this.router.navigate(['cliente']))
   }
 
+  listaCliente(){
+    this.router.navigate(['cliente']);
+}
+
 }
