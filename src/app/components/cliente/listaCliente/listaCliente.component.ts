@@ -53,4 +53,8 @@ export class ListaClienteComponent implements OnInit{
         this.router.navigate(['cadastroCliente']);
     }
 
+    atualizaCliente(){
+        this.router.navigate(['atualizaCliente']);
+    }
+
 }

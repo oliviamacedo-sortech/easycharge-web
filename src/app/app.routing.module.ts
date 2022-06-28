@@ -12,6 +12,7 @@ const routes: Routes = [
     { path: 'cadastroCliente', component: ClienteFormComponent}
 
 
+
 ]
 
 @NgModule({
